@@ -12,17 +12,20 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+// Swagger
+var swaggerConfig = builder.Configuration.GetSection("Swagger");
 builder.Services.AddSwaggerGen(c =>
 {
-    c.SwaggerDoc("v1", new OpenApiInfo
+    c.SwaggerDoc(swaggerConfig["Version"], new OpenApiInfo
     {
-        Title = "Task Management API",
-        Version = "v1",
-        Description = "A simple ASP.NET Core Web API for managing tasks",
+        Title = swaggerConfig["Title"],
+        Version = swaggerConfig["Version"],
+        Description = swaggerConfig["Description"],
         Contact = new OpenApiContact
         {
-            Name = "Ng Ka Weng",
-            Url = new Uri("https://github.com/kawengng")
+            Name = swaggerConfig.GetSection("Contact")["Name"],
+            Url = new Uri(swaggerConfig.GetSection("Contact")["Url"])
         }
     });
 
@@ -36,12 +39,14 @@ builder.Services.AddSwaggerGen(c =>
 });
 
 // Cors
+var allowedOrigins = builder.Configuration.GetSection("AllowedOrigins").Get<string[]>();
+
 builder.Services.AddCors(options =>
 {
     options.AddDefaultPolicy(
         policy =>
         {
-            policy.WithOrigins("http://localhost:5173").AllowAnyHeader().AllowAnyMethod();
+            policy.WithOrigins(allowedOrigins).AllowAnyHeader().AllowAnyMethod();
         });
 });
 
@@ -50,7 +55,7 @@ builder.Services.AddScoped<ITaskService, TaskService>();
 
 // Database
 builder.Services.AddDbContext<TasksDbContext>(
-    opt => opt.UseSqlite(builder.Configuration.GetConnectionString("TasksDb")),
+    opt => opt.UseSqlite(builder.Configuration.GetConnectionString("Db")),
     contextLifetime: ServiceLifetime.Scoped
 );
 
