@@ -2,6 +2,7 @@
 using TaskManagment.Data;
 using TaskManagment.Mapping;
 using Microsoft.OpenApi.Models;
+using TaskManagment.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -43,6 +44,9 @@ builder.Services.AddCors(options =>
             policy.WithOrigins("http://localhost:5173").AllowAnyHeader().AllowAnyMethod();
         });
 });
+
+// Services
+builder.Services.AddScoped<ITaskService, TaskService>();
 
 // Database
 builder.Services.AddDbContext<TasksDbContext>(

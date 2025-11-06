@@ -1,9 +1,6 @@
-﻿using AutoMapper;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using TaskManagment.Data;
+﻿using Microsoft.AspNetCore.Mvc;
 using TaskManagment.Dtos;
-using TaskManagment.Models;
+using TaskManagment.Services;
 
 namespace TaskApi.Controllers;
 
@@ -11,13 +8,11 @@ namespace TaskApi.Controllers;
 [Route("api/tasks")]
 public class TasksController : ControllerBase
 {
-    private readonly TasksDbContext _db;
-    private readonly IMapper _mapper;
+    private readonly ITaskService _taskService;
 
-    public TasksController(TasksDbContext db, IMapper mapper)
+    public TasksController(ITaskService taskService)
     {
-        _db = db;
-        _mapper = mapper;
+        _taskService = taskService;
     }
 
     /// <summary>
@@ -29,12 +24,8 @@ public class TasksController : ControllerBase
     [HttpPost]
     public async Task<ActionResult<ReadTaskDto>> Create(CreateTaskDto dto)
     {
-        var entity = _mapper.Map<TaskItem>(dto);
-        _db.Tasks.Add(entity);
-        await _db.SaveChangesAsync();
-
-        var result = _mapper.Map<ReadTaskDto>(entity);
-        return CreatedAtAction(nameof(GetById), new { id = entity.Id }, result);
+        var result = await _taskService.CreateAsync(dto);
+        return CreatedAtAction(nameof(GetById), new { id = result.Id }, result);
     }
 
     /// <summary>
@@ -51,28 +42,8 @@ public class TasksController : ControllerBase
         [FromQuery] int page = 1,
         [FromQuery] int pageSize = 10)
     {
-        IQueryable<TaskItem> query = _db.Tasks;
-
-        if (completed.HasValue)
-            query = query.Where(t => t.Completed == completed.Value);
-
-        var totalCount = await query.CountAsync();
-
-        var tasks = await query
-            .OrderByDescending(t => t.UpdatedAt)
-            .Skip((page - 1) * pageSize)
-            .Take(pageSize)
-            .ToListAsync();
-
-        var taskDtos = _mapper.Map<IEnumerable<ReadTaskDto>>(tasks);
-
-        return Ok(new
-        {
-            total = totalCount,
-            page,
-            pageSize,
-            tasks = taskDtos
-        });
+        var (tasks, total) = await _taskService.GetAllAsync(completed, page, pageSize);
+        return Ok(new { total, page, pageSize, tasks });
     }
 
     /// <summary>
@@ -84,10 +55,9 @@ public class TasksController : ControllerBase
     [HttpGet("{id:guid}")]
     public async Task<ActionResult<ReadTaskDto>> GetById(Guid id)
     {
-        var entity = await _db.Tasks.FirstOrDefaultAsync(t => t.Id == id);
-        if (entity == null) return NotFound();
-
-        return Ok(_mapper.Map<ReadTaskDto>(entity));
+        var result = await _taskService.GetByIdAsync(id);
+        if (result == null) return NotFound();
+        return Ok(result);
     }
 
     /// <summary>
@@ -100,13 +70,9 @@ public class TasksController : ControllerBase
     [HttpPut("{id:guid}")]
     public async Task<ActionResult<ReadTaskDto>> Update(Guid id, UpdateTaskDto dto)
     {
-        var entity = await _db.Tasks.FirstOrDefaultAsync(t => t.Id == id);
-        if (entity == null) return NotFound();
-
-        _mapper.Map(dto, entity);
-        await _db.SaveChangesAsync();
-
-        return Ok(_mapper.Map<ReadTaskDto>(entity));
+        var result = await _taskService.UpdateAsync(id, dto);
+        if (result == null) return NotFound();
+        return Ok(result);
     }
 
     /// <summary>
@@ -118,12 +84,8 @@ public class TasksController : ControllerBase
     [HttpDelete("{id:guid}")]
     public async Task<IActionResult> Delete(Guid id)
     {
-        var entity = await _db.Tasks.FirstOrDefaultAsync(t => t.Id == id);
-        if (entity == null) return NotFound();
-
-        _db.Tasks.Remove(entity);
-        await _db.SaveChangesAsync();
-
+        var deleted = await _taskService.DeleteAsync(id);
+        if (!deleted) return NotFound();
         return NoContent();
     }
 }
