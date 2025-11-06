@@ -8,7 +8,7 @@ using TaskManagment.Models;
 namespace TaskApi.Controllers;
 
 [ApiController]
-[Route("api/task")]
+[Route("api/tasks")]
 public class TasksController : ControllerBase
 {
     private readonly TasksDbContext _db;
