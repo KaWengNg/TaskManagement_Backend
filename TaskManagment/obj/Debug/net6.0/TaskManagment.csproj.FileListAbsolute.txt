@@ -91,3 +91,5 @@
 /Users/kawengng/TaskManagement_Backend/TaskManagment/bin/Debug/net6.0/runtimes/win-x86/native/e_sqlite3.dll
 /Users/kawengng/TaskManagement_Backend/TaskManagment/bin/Debug/net6.0/Humanizer.dll
 /Users/kawengng/TaskManagement_Backend/TaskManagment/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.Design.dll
+/Users/kawengng/TaskManagement_Backend/TaskManagment/bin/Debug/net6.0/TaskManagment.xml
+/Users/kawengng/TaskManagement_Backend/TaskManagment/obj/Debug/net6.0/TaskManagment.xml
