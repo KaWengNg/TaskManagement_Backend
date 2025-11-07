@@ -4,6 +4,7 @@ using TaskManagment.Data;
 using TaskManagment.Mapping;
 using TaskManagment.Services;
 using TaskManagment.Dtos;
+using Microsoft.Extensions.Logging;
 
 namespace TaskManagement.Tests.Test
 {
@@ -11,6 +12,7 @@ namespace TaskManagement.Tests.Test
     {
         private readonly IMapper _mapper;
         private readonly DbContextOptions<TasksDbContext> _dbOptions;
+        private readonly ILogger<TaskService> _logger;
 
         public UnitTest()
         {
@@ -25,7 +27,7 @@ namespace TaskManagement.Tests.Test
 
         private TaskService CreateService(TasksDbContext context)
         {
-            return new TaskService(context, _mapper);
+            return new TaskService(context, _mapper, _logger);
         }
 
         [Fact]
