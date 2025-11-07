@@ -1,4 +1,5 @@
-﻿using AutoMapper;
+﻿using System.Threading.Tasks;
+using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 using TaskManagment.Data;
 using TaskManagment.Dtos;
@@ -17,15 +18,16 @@ namespace TaskManagment.Services
             _mapper = mapper;
         }
 
-        public async Task<ReadTaskDto> CreateAsync(CreateTaskDto dto)
+        public async Task<ServiceResult<ReadTaskDto>> CreateAsync(CreateTaskDto dto)
         {
             var entity = _mapper.Map<TaskItem>(dto);
             _db.Tasks.Add(entity);
             await _db.SaveChangesAsync();
-            return _mapper.Map<ReadTaskDto>(entity);
+            var result = _mapper.Map<ReadTaskDto>(entity);
+            return ServiceResult<ReadTaskDto>.Success(result, "Task created successfully.");
         }
 
-        public async Task<(IEnumerable<ReadTaskDto> tasks, int totalCount)> GetAllAsync(bool? completed, int page, int pageSize)
+        public async Task<ServiceResult<PagedResultDto<ReadTaskDto>>> GetAllAsync(bool? completed, int page, int pageSize)
         {
             IQueryable<TaskItem> query = _db.Tasks;
 
@@ -38,40 +40,53 @@ namespace TaskManagment.Services
                 .OrderByDescending(t => t.UpdatedAt)
                 .Skip((page - 1) * pageSize)
                 .Take(pageSize)
-                .ToListAsync();
+            .ToListAsync();
 
-            var dtoList = _mapper.Map<IEnumerable<ReadTaskDto>>(entities);
+            var mapped = _mapper.Map<IEnumerable<ReadTaskDto>>(entities);
 
-            return (dtoList, totalCount);
+            var pagedResult = new PagedResultDto<ReadTaskDto>
+            {
+                Page = page,
+                PageSize = pageSize,
+                TotalCount = totalCount,
+                Items = mapped
+            };
+
+            return ServiceResult<PagedResultDto<ReadTaskDto>>.Success(pagedResult);
         }
 
-        public async Task<ReadTaskDto?> GetByIdAsync(Guid id)
+        public async Task<ServiceResult<ReadTaskDto>> GetByIdAsync(Guid id)
         {
             var entity = await _db.Tasks.FirstOrDefaultAsync(t => t.Id == id);
-            return entity == null ? null : _mapper.Map<ReadTaskDto>(entity);
+
+            if (entity == null)
+                return ServiceResult<ReadTaskDto>.NotFound($"Task with ID {id} not found.");
+
+            var dto = _mapper.Map<ReadTaskDto>(entity);
+            return ServiceResult<ReadTaskDto>.Success(dto);
         }
 
-        public async Task<ReadTaskDto?> UpdateAsync(Guid id, UpdateTaskDto dto)
-        {
-            var entity = await _db.Tasks.FirstOrDefaultAsync(t => t.Id == id);
-            if (entity == null) // to do response serviceresult instead
-                return null;
-
-            _mapper.Map(dto, entity);
-            await _db.SaveChangesAsync();
-
-            return _mapper.Map<ReadTaskDto>(entity);
-        }
-
-        public async Task<bool> DeleteAsync(Guid id)
+        public async Task<ServiceResult<ReadTaskDto>> UpdateAsync(Guid id, UpdateTaskDto dto)
         {
             var entity = await _db.Tasks.FirstOrDefaultAsync(t => t.Id == id);
             if (entity == null)
-                return false;
+                return ServiceResult<ReadTaskDto>.NotFound($"Task with ID {id} not found.");
+
+            _mapper.Map(dto, entity);
+            await _db.SaveChangesAsync();
+            var updated = _mapper.Map<ReadTaskDto>(entity);
+            return ServiceResult<ReadTaskDto>.Success(updated, "Task updated successfully.");
+        }
+
+        public async Task<ServiceResult<bool>> DeleteAsync(Guid id)
+        {
+            var entity = await _db.Tasks.FirstOrDefaultAsync(t => t.Id == id);
+            if (entity == null)
+                return ServiceResult<bool>.NotFound($"Task with ID {id} not found.");
 
             _db.Tasks.Remove(entity);
             await _db.SaveChangesAsync();
-            return true;
+            return ServiceResult<bool>.Success(true, "Task deleted successfully.");
         }
     }
 }

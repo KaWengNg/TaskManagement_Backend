@@ -1,4 +1,49 @@
 ﻿<Properties StartupConfiguration="{5A5E0838-D111-4C8A-B3BF-889DA9D77403}|Default">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.TaskManagment PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="TaskManagment/Helpers/ResolveServiceResult.cs">
+    <Files>
+      <File FileName="TaskManagment/Program.cs" Line="78" Column="22" />
+      <File FileName="TaskManagment/appsettings.json" Line="22" Column="65" />
+      <File FileName="TaskManagment/Enum/TaskServiceStatus.cs" Line="3" Column="17" />
+      <File FileName="TaskManagment/Controllers/TaskController.cs" Line="29" Column="69" />
+      <File FileName="TaskManagment/Services/ServiceResult.cs" Line="25" Column="66" />
+      <File FileName="TaskManagment/Services/ITaskService.cs" Line="12" Column="6" />
+      <File FileName="TaskManagment/Services/TaskService.cs" Line="45" Column="57" />
+      <File FileName="TaskManagment/Dtos/ReadTaskDto.cs" Line="1" Column="1" />
+      <File FileName="TaskManagment/Helpers/ResolveServiceResult.cs" Line="12" Column="1" />
+      <File FileName="TaskManagment/Mapping/TaskMapping.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="TaskManagment">
+            <Node name="TaskManagment">
+              <Node name="Dependencies" expanded="True">
+                <Node name="PackageDependencies" expanded="True" />
+              </Node>
+              <Node name="Data" expanded="True" />
+              <Node name="Dtos" expanded="True" />
+              <Node name="Enum" expanded="True" />
+              <Node name="Helpers" expanded="True">
+                <Node name="ResolveServiceResult.cs" selected="True" />
+              </Node>
+              <Node name="Mapping" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="Properties" expanded="True" />
+              <Node name="Services" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
 </Properties>

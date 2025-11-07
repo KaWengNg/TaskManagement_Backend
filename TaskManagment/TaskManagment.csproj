@@ -26,6 +26,8 @@
     <None Remove="Models\" />
     <None Remove="Mapping\" />
     <None Remove="Services\" />
+    <None Remove="Enum\" />
+    <None Remove="Helpers\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Data\" />
@@ -33,5 +35,7 @@
     <Folder Include="Models\" />
     <Folder Include="Mapping\" />
     <Folder Include="Services\" />
+    <Folder Include="Enum\" />
+    <Folder Include="Helpers\" />
   </ItemGroup>
 </Project>

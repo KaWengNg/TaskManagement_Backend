@@ -8,11 +8,9 @@ using AspNetCoreRateLimit;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
 
 // Rate-limiting services (use this approach since using .net6, not supported for built-in Microsoft.AspNetCore.RateLimiting)
 builder.Services.AddMemoryCache();

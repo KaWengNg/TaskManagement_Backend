@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using TaskManagment.Dtos;
 using TaskManagment.Services;
+using TaskManagment.Helpers;
 
 namespace TaskApi.Controllers;
 
@@ -25,7 +26,7 @@ public class TasksController : ControllerBase
     public async Task<ActionResult<ReadTaskDto>> Create(CreateTaskDto dto)
     {
         var result = await _taskService.CreateAsync(dto);
-        return CreatedAtAction(nameof(GetById), new { id = result.Id }, result);
+        return ControllerResponseHelper.ResolveResult(this, result);
     }
 
     /// <summary>
@@ -42,8 +43,8 @@ public class TasksController : ControllerBase
         [FromQuery] int page = 1,
         [FromQuery] int pageSize = 10)
     {
-        var (tasks, total) = await _taskService.GetAllAsync(completed, page, pageSize);
-        return Ok(new { total, page, pageSize, tasks });
+        var result = await _taskService.GetAllAsync(completed, page, pageSize);
+        return ControllerResponseHelper.ResolveResult(this, result);
     }
 
     /// <summary>
@@ -57,7 +58,7 @@ public class TasksController : ControllerBase
     {
         var result = await _taskService.GetByIdAsync(id);
         if (result == null) return NotFound();
-        return Ok(result);
+        return ControllerResponseHelper.ResolveResult(this, result);
     }
 
     /// <summary>
@@ -71,8 +72,7 @@ public class TasksController : ControllerBase
     public async Task<ActionResult<ReadTaskDto>> Update(Guid id, UpdateTaskDto dto)
     {
         var result = await _taskService.UpdateAsync(id, dto);
-        if (result == null) return NotFound();
-        return Ok(result);
+        return ControllerResponseHelper.ResolveResult(this, result);
     }
 
     /// <summary>
@@ -84,9 +84,8 @@ public class TasksController : ControllerBase
     [HttpDelete("{id:guid}")]
     public async Task<IActionResult> Delete(Guid id)
     {
-        var deleted = await _taskService.DeleteAsync(id);
-        if (!deleted) return NotFound();
-        return NoContent();
+        var result = await _taskService.DeleteAsync(id);
+        return ControllerResponseHelper.ResolveResult(this, result);
     }
 }
 
