@@ -25,6 +25,8 @@ namespace TaskManagment.Services
             _db.Tasks.Add(entity);
             await _db.SaveChangesAsync();
             var result = _mapper.Map<ReadTaskDto>(entity);
+
+            _logger.LogInformation($"Task {result.Title} created successfully.");
             return ServiceResult<ReadTaskDto>.Success(result, "Task created successfully.");
         }
 
@@ -82,8 +84,10 @@ namespace TaskManagment.Services
 
             _mapper.Map(dto, entity);
             await _db.SaveChangesAsync();
-            var updated = _mapper.Map<ReadTaskDto>(entity);
-            return ServiceResult<ReadTaskDto>.Success(updated, "Task updated successfully.");
+            var result = _mapper.Map<ReadTaskDto>(entity);
+
+            _logger.LogInformation($"Task Id {result.Id} updated successfully.");
+            return ServiceResult<ReadTaskDto>.Success(result, "Task updated successfully.");
         }
 
         public async Task<ServiceResult<bool>> DeleteAsync(Guid id)
@@ -98,6 +102,8 @@ namespace TaskManagment.Services
 
             _db.Tasks.Remove(entity);
             await _db.SaveChangesAsync();
+
+            _logger.LogInformation($"Task {entity.Title} deleted successfully.");
             return ServiceResult<bool>.Success(true, "Task deleted successfully.");
         }
     }
