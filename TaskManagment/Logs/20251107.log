@@ -38,3 +38,247 @@
 2025-11-07 18:51:42.611 +08:00 [INF] Task xx created successfully.
 2025-11-07 18:51:54.971 +08:00 [WRN] Blocked XSS attempt on /api/tasks/11053058-18d7-474a-84d3-a29771118c29
 2025-11-07 18:51:58.315 +08:00 [INF] Task Id 11053058-18d7-474a-84d3-a29771118c29 updated successfully.
+2025-11-07 19:12:43.165 +08:00 [WRN] Failed to determine the https port for redirect.
+2025-11-07 19:22:13.785 +08:00 [WRN] Failed to determine the https port for redirect.
+2025-11-07 19:22:33.837 +08:00 [INF] Task asda created successfully.
+2025-11-07 19:24:02.152 +08:00 [WRN] Failed to determine the https port for redirect.
+2025-11-07 19:24:06.038 +08:00 [ERR] Unhandled exception occurred.
+System.InvalidOperationException: Simulated runtime exception for testing global error handling.
+   at TaskManagment.Services.TaskService.GetAllAsync(Nullable`1 completed, Int32 page, Int32 pageSize) in /Users/kawengng/TaskManagement_Backend/TaskManagment/Services/TaskService.cs:line 35
+   at TaskApi.Controllers.TasksController.GetAll(Nullable`1 completed, Int32 page, Int32 pageSize) in /Users/kawengng/TaskManagement_Backend/TaskManagment/Controllers/TaskController.cs:line 46
+   at lambda_method6(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at TaskManagment.Middlewares.InputValidationMiddleware.InvokeAsync(HttpContext context) in /Users/kawengng/TaskManagement_Backend/TaskManagment/Middlewares/InputSanitizationMiddleware.cs:line 59
+   at TaskManagment.Middlewares.GlobalExceptionMiddleware.InvokeAsync(HttpContext context) in /Users/kawengng/TaskManagement_Backend/TaskManagment/Middlewares/GlobalExceptionMiddleware.cs:line 28
+2025-11-07 19:24:44.002 +08:00 [ERR] Unhandled exception occurred.
+System.InvalidOperationException: Simulated runtime exception for testing global error handling.
+   at TaskManagment.Services.TaskService.GetAllAsync(Nullable`1 completed, Int32 page, Int32 pageSize) in /Users/kawengng/TaskManagement_Backend/TaskManagment/Services/TaskService.cs:line 35
+   at TaskApi.Controllers.TasksController.GetAll(Nullable`1 completed, Int32 page, Int32 pageSize) in /Users/kawengng/TaskManagement_Backend/TaskManagment/Controllers/TaskController.cs:line 46
+   at lambda_method6(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at TaskManagment.Middlewares.InputValidationMiddleware.InvokeAsync(HttpContext context) in /Users/kawengng/TaskManagement_Backend/TaskManagment/Middlewares/InputSanitizationMiddleware.cs:line 59
+   at TaskManagment.Middlewares.GlobalExceptionMiddleware.InvokeAsync(HttpContext context) in /Users/kawengng/TaskManagement_Backend/TaskManagment/Middlewares/GlobalExceptionMiddleware.cs:line 28
+2025-11-07 19:34:37.271 +08:00 [WRN] Failed to determine the https port for redirect.
+2025-11-07 19:34:47.743 +08:00 [ERR] Unhandled exception occurred.
+System.InvalidOperationException: Simulated runtime exception for testing global error handling.
+   at TaskManagment.Services.TaskService.GetAllAsync(Nullable`1 completed, Int32 page, Int32 pageSize) in /Users/kawengng/TaskManagement_Backend/TaskManagment/Services/TaskService.cs:line 35
+   at TaskApi.Controllers.TasksController.GetAll(Nullable`1 completed, Int32 page, Int32 pageSize) in /Users/kawengng/TaskManagement_Backend/TaskManagment/Controllers/TaskController.cs:line 46
+   at lambda_method6(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at TaskManagment.Middlewares.InputValidationMiddleware.InvokeAsync(HttpContext context) in /Users/kawengng/TaskManagement_Backend/TaskManagment/Middlewares/InputSanitizationMiddleware.cs:line 59
+   at TaskManagment.Middlewares.GlobalExceptionMiddleware.InvokeAsync(HttpContext context) in /Users/kawengng/TaskManagement_Backend/TaskManagment/Middlewares/GlobalExceptionMiddleware.cs:line 29
+2025-11-07 19:34:47.759 +08:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TaskManagment.Middlewares.GlobalExceptionMiddleware.InvokeAsync(HttpContext context) in /Users/kawengng/TaskManagement_Backend/TaskManagment/Middlewares/GlobalExceptionMiddleware.cs:line 40
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at AspNetCoreRateLimit.RateLimitMiddleware`1.Invoke(HttpContext context) in C:\Users\User\Documents\Github\AspNetCoreRateLimit\src\AspNetCoreRateLimit\Middleware\RateLimitMiddleware.cs:line 124
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-11-07 19:35:21.711 +08:00 [ERR] Unhandled exception occurred.
+System.InvalidOperationException: Simulated runtime exception for testing global error handling.
+   at TaskManagment.Services.TaskService.GetAllAsync(Nullable`1 completed, Int32 page, Int32 pageSize) in /Users/kawengng/TaskManagement_Backend/TaskManagment/Services/TaskService.cs:line 35
+   at TaskApi.Controllers.TasksController.GetAll(Nullable`1 completed, Int32 page, Int32 pageSize) in /Users/kawengng/TaskManagement_Backend/TaskManagment/Controllers/TaskController.cs:line 46
+   at lambda_method6(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at TaskManagment.Middlewares.InputValidationMiddleware.InvokeAsync(HttpContext context) in /Users/kawengng/TaskManagement_Backend/TaskManagment/Middlewares/InputSanitizationMiddleware.cs:line 59
+   at TaskManagment.Middlewares.GlobalExceptionMiddleware.InvokeAsync(HttpContext context) in /Users/kawengng/TaskManagement_Backend/TaskManagment/Middlewares/GlobalExceptionMiddleware.cs:line 29
+2025-11-07 19:35:21.724 +08:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TaskManagment.Middlewares.GlobalExceptionMiddleware.InvokeAsync(HttpContext context) in /Users/kawengng/TaskManagement_Backend/TaskManagment/Middlewares/GlobalExceptionMiddleware.cs:line 40
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at AspNetCoreRateLimit.RateLimitMiddleware`1.Invoke(HttpContext context) in C:\Users\User\Documents\Github\AspNetCoreRateLimit\src\AspNetCoreRateLimit\Middleware\RateLimitMiddleware.cs:line 124
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-11-07 19:35:38.187 +08:00 [ERR] Unhandled exception occurred.
+System.InvalidOperationException: Simulated runtime exception for testing global error handling.
+   at TaskManagment.Services.TaskService.GetAllAsync(Nullable`1 completed, Int32 page, Int32 pageSize) in /Users/kawengng/TaskManagement_Backend/TaskManagment/Services/TaskService.cs:line 35
+   at TaskApi.Controllers.TasksController.GetAll(Nullable`1 completed, Int32 page, Int32 pageSize) in /Users/kawengng/TaskManagement_Backend/TaskManagment/Controllers/TaskController.cs:line 46
+   at lambda_method6(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at TaskManagment.Middlewares.InputValidationMiddleware.InvokeAsync(HttpContext context) in /Users/kawengng/TaskManagement_Backend/TaskManagment/Middlewares/InputSanitizationMiddleware.cs:line 59
+   at TaskManagment.Middlewares.GlobalExceptionMiddleware.InvokeAsync(HttpContext context) in /Users/kawengng/TaskManagement_Backend/TaskManagment/Middlewares/GlobalExceptionMiddleware.cs:line 29
+2025-11-07 19:35:38.196 +08:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TaskManagment.Middlewares.GlobalExceptionMiddleware.InvokeAsync(HttpContext context) in /Users/kawengng/TaskManagement_Backend/TaskManagment/Middlewares/GlobalExceptionMiddleware.cs:line 40
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at AspNetCoreRateLimit.RateLimitMiddleware`1.Invoke(HttpContext context) in C:\Users\User\Documents\Github\AspNetCoreRateLimit\src\AspNetCoreRateLimit\Middleware\RateLimitMiddleware.cs:line 124
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-11-07 19:35:51.914 +08:00 [ERR] Unhandled exception occurred.
+System.InvalidOperationException: Simulated runtime exception for testing global error handling.
+   at TaskManagment.Services.TaskService.GetAllAsync(Nullable`1 completed, Int32 page, Int32 pageSize) in /Users/kawengng/TaskManagement_Backend/TaskManagment/Services/TaskService.cs:line 35
+   at TaskApi.Controllers.TasksController.GetAll(Nullable`1 completed, Int32 page, Int32 pageSize) in /Users/kawengng/TaskManagement_Backend/TaskManagment/Controllers/TaskController.cs:line 46
+   at lambda_method6(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at TaskManagment.Middlewares.InputValidationMiddleware.InvokeAsync(HttpContext context) in /Users/kawengng/TaskManagement_Backend/TaskManagment/Middlewares/InputSanitizationMiddleware.cs:line 59
+   at TaskManagment.Middlewares.GlobalExceptionMiddleware.InvokeAsync(HttpContext context) in /Users/kawengng/TaskManagement_Backend/TaskManagment/Middlewares/GlobalExceptionMiddleware.cs:line 29
+2025-11-07 19:36:28.708 +08:00 [WRN] Failed to determine the https port for redirect.
+2025-11-07 19:36:34.368 +08:00 [ERR] Unhandled exception occurred.
+System.InvalidOperationException: Simulated runtime exception for testing global error handling.
+   at TaskManagment.Services.TaskService.GetAllAsync(Nullable`1 completed, Int32 page, Int32 pageSize) in /Users/kawengng/TaskManagement_Backend/TaskManagment/Services/TaskService.cs:line 35
+   at TaskApi.Controllers.TasksController.GetAll(Nullable`1 completed, Int32 page, Int32 pageSize) in /Users/kawengng/TaskManagement_Backend/TaskManagment/Controllers/TaskController.cs:line 46
+   at lambda_method6(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at TaskManagment.Middlewares.InputValidationMiddleware.InvokeAsync(HttpContext context) in /Users/kawengng/TaskManagement_Backend/TaskManagment/Middlewares/InputSanitizationMiddleware.cs:line 59
+   at TaskManagment.Middlewares.GlobalExceptionMiddleware.InvokeAsync(HttpContext context) in /Users/kawengng/TaskManagement_Backend/TaskManagment/Middlewares/GlobalExceptionMiddleware.cs:line 29
+2025-11-07 19:36:57.518 +08:00 [ERR] Unhandled exception occurred.
+System.InvalidOperationException: Simulated runtime exception for testing global error handling.
+   at TaskManagment.Services.TaskService.GetAllAsync(Nullable`1 completed, Int32 page, Int32 pageSize) in /Users/kawengng/TaskManagement_Backend/TaskManagment/Services/TaskService.cs:line 35
+   at TaskApi.Controllers.TasksController.GetAll(Nullable`1 completed, Int32 page, Int32 pageSize) in /Users/kawengng/TaskManagement_Backend/TaskManagment/Controllers/TaskController.cs:line 46
+   at lambda_method6(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at TaskManagment.Middlewares.InputValidationMiddleware.InvokeAsync(HttpContext context) in /Users/kawengng/TaskManagement_Backend/TaskManagment/Middlewares/InputSanitizationMiddleware.cs:line 59
+   at TaskManagment.Middlewares.GlobalExceptionMiddleware.InvokeAsync(HttpContext context) in /Users/kawengng/TaskManagement_Backend/TaskManagment/Middlewares/GlobalExceptionMiddleware.cs:line 29
+2025-11-07 19:38:44.911 +08:00 [WRN] Failed to determine the https port for redirect.
+2025-11-07 19:39:05.402 +08:00 [ERR] Unhandled exception occurred.
+System.InvalidOperationException: Simulated runtime exception for testing global error handling.q
+   at TaskManagment.Services.TaskService.GetAllAsync(Nullable`1 completed, Int32 page, Int32 pageSize) in /Users/kawengng/TaskManagement_Backend/TaskManagment/Services/TaskService.cs:line 35
+   at TaskApi.Controllers.TasksController.GetAll(Nullable`1 completed, Int32 page, Int32 pageSize) in /Users/kawengng/TaskManagement_Backend/TaskManagment/Controllers/TaskController.cs:line 46
+   at lambda_method5(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at TaskManagment.Middlewares.InputValidationMiddleware.InvokeAsync(HttpContext context) in /Users/kawengng/TaskManagement_Backend/TaskManagment/Middlewares/InputSanitizationMiddleware.cs:line 59
+   at TaskManagment.Middlewares.GlobalExceptionMiddleware.InvokeAsync(HttpContext context) in /Users/kawengng/TaskManagement_Backend/TaskManagment/Middlewares/GlobalExceptionMiddleware.cs:line 29
+2025-11-07 19:42:00.307 +08:00 [WRN] Failed to determine the https port for redirect.
+2025-11-07 19:42:08.208 +08:00 [ERR] Unhandled exception occurred.
+System.InvalidOperationException: Simulated runtime exception for testing global error handling.q
+   at TaskManagment.Services.TaskService.GetAllAsync(Nullable`1 completed, Int32 page, Int32 pageSize) in /Users/kawengng/TaskManagement_Backend/TaskManagment/Services/TaskService.cs:line 35
+   at TaskApi.Controllers.TasksController.GetAll(Nullable`1 completed, Int32 page, Int32 pageSize) in /Users/kawengng/TaskManagement_Backend/TaskManagment/Controllers/TaskController.cs:line 46
+   at lambda_method5(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at TaskManagment.Middlewares.InputValidationMiddleware.InvokeAsync(HttpContext context) in /Users/kawengng/TaskManagement_Backend/TaskManagment/Middlewares/InputSanitizationMiddleware.cs:line 59
+   at TaskManagment.Middlewares.GlobalExceptionMiddleware.InvokeAsync(HttpContext context) in /Users/kawengng/TaskManagement_Backend/TaskManagment/Middlewares/GlobalExceptionMiddleware.cs:line 29
+2025-11-07 19:42:35.490 +08:00 [WRN] Failed to determine the https port for redirect.
+2025-11-07 19:43:05.023 +08:00 [WRN] Failed to determine the https port for redirect.
+2025-11-07 19:43:19.136 +08:00 [ERR] Unhandled exception occurred.
+System.InvalidOperationException: Simulated runtime exception for testing global error handling.qa
+   at TaskManagment.Services.TaskService.GetAllAsync(Nullable`1 completed, Int32 page, Int32 pageSize) in /Users/kawengng/TaskManagement_Backend/TaskManagment/Services/TaskService.cs:line 35
+   at TaskApi.Controllers.TasksController.GetAll(Nullable`1 completed, Int32 page, Int32 pageSize) in /Users/kawengng/TaskManagement_Backend/TaskManagment/Controllers/TaskController.cs:line 46
+   at lambda_method6(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at TaskManagment.Middlewares.InputValidationMiddleware.InvokeAsync(HttpContext context) in /Users/kawengng/TaskManagement_Backend/TaskManagment/Middlewares/InputSanitizationMiddleware.cs:line 59
+   at TaskManagment.Middlewares.GlobalExceptionMiddleware.InvokeAsync(HttpContext context) in /Users/kawengng/TaskManagement_Backend/TaskManagment/Middlewares/GlobalExceptionMiddleware.cs:line 29
+2025-11-07 19:43:46.640 +08:00 [WRN] Failed to determine the https port for redirect.

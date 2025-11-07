@@ -36,6 +36,7 @@ if (app.Environment.IsDevelopment())
 }
 
 //Middleware
+app.UseMiddleware<GlobalExceptionMiddleware>();
 app.UseMiddleware<InputValidationMiddleware>();
 
 app.UseCors();
