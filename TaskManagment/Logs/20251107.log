@@ -26,3 +26,15 @@
 2025-11-07 15:41:01.884 +08:00 [INF] Task xx created successfully.
 2025-11-07 15:41:12.115 +08:00 [WRN] Blocked XSS attempt on /api/tasks/9bd9e56b-0598-48b4-8938-f8a1c39c785c
 2025-11-07 15:41:15.934 +08:00 [INF] Task Id 9bd9e56b-0598-48b4-8938-f8a1c39c785c updated successfully.
+2025-11-07 18:46:53.079 +08:00 [WRN] Failed to determine the https port for redirect.
+2025-11-07 18:49:38.690 +08:00 [WRN] Blocked XSS attempt on /api/tasks
+2025-11-07 18:50:37.803 +08:00 [INF] Task abcd created successfully.
+2025-11-07 18:51:05.173 +08:00 [INF] Task xccxx created successfully.
+2025-11-07 18:51:11.043 +08:00 [INF] Task Id f18c4131-4690-43ce-8f0d-817ff710f6a8 updated successfully.
+2025-11-07 18:51:14.644 +08:00 [INF] Request get:/api/tasks from IP ::1 has been blocked, quota 5/10s exceeded by 1. Blocked by rule *, TraceIdentifier 0HNGTTBQV1JLN:00000003. MonitorMode: False
+2025-11-07 18:51:14.842 +08:00 [INF] Request get:/api/tasks from IP ::1 has been blocked, quota 5/10s exceeded by 2. Blocked by rule *, TraceIdentifier 0HNGTTBQV1JLN:00000004. MonitorMode: False
+2025-11-07 18:51:19.341 +08:00 [INF] Request get:/api/tasks from IP ::1 has been blocked, quota 5/10s exceeded by 3. Blocked by rule *, TraceIdentifier 0HNGTTBQV1JLO:00000001. MonitorMode: False
+2025-11-07 18:51:39.093 +08:00 [WRN] Blocked XSS attempt on /api/tasks
+2025-11-07 18:51:42.611 +08:00 [INF] Task xx created successfully.
+2025-11-07 18:51:54.971 +08:00 [WRN] Blocked XSS attempt on /api/tasks/11053058-18d7-474a-84d3-a29771118c29
+2025-11-07 18:51:58.315 +08:00 [INF] Task Id 11053058-18d7-474a-84d3-a29771118c29 updated successfully.

@@ -32,6 +32,7 @@
     <None Remove="Helpers\" />
     <None Remove="Logs\" />
     <None Remove="Middlewares\" />
+    <None Remove="Extensions\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Data\" />
@@ -43,5 +44,6 @@
     <Folder Include="Helpers\" />
     <Folder Include="Logs\" />
     <Folder Include="Middlewares\" />
+    <Folder Include="Extensions\" />
   </ItemGroup>
 </Project>

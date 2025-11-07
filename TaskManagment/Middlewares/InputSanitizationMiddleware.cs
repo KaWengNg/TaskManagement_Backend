@@ -89,12 +89,4 @@ namespace TaskManagment.Middlewares
             return !string.Equals(original, sanitized, StringComparison.Ordinal);
         }
     }
-
-    public static class InputValidationMiddlewareExtensions
-    {
-        public static IApplicationBuilder UseInputSanitization(this IApplicationBuilder app)
-        {
-            return app.UseMiddleware<InputValidationMiddleware>();
-        }
-    }
 }
