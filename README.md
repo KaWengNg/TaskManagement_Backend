@@ -1,9 +1,19 @@
 ﻿# Project overview
 ##### This is a simple project for task management system which allows to create, retrieve, edit, and delete the task. It is build using the .NetCore with .Net Framework version 6.0 for the backend and Vite tools to build the Web front-end using TypeScript and React. I use TailwindCSS to handle responsive UI.
 
-## Prerequisites (required SDK versions, Node.js version, etc.)
+## Prerequisites 
+######  .NET 6 SDK
+###### Visual Studio IDE
 
-## Setup instructions for both backend and frontend
+## Setup instructions 
+#### Setup
+cd TaskManagement_Backend
+dotnet restore
+dotnet build
+#### Database
+dotnet ef database update
+#### Run the API
+dotnet run
 
 ## How to run the application locally
 ##### The application can be run locally using the visual studio code (front-end) and visual studio IDE (back-end) with necessary libraries being installed.
@@ -22,5 +32,6 @@
 ##### 5. Implement separation of concerns with Controller, Service, Data Access Layers.
 ##### 6. Configure CORS for development
 ##### 7. Use Data Transfer Objects with AutoMapper.
-##### 8. Use RateLimit to limit incoming requests per IP.
-##### 9. Implement HtmlSanitizer for incoming payloads in middleware to prevent XSS.
+##### 8. Implement Global Exception handler middleware.
+##### 9. Use RateLimit to limit incoming requests per IP.
+##### 10. Implement HtmlSanitizer for incoming payloads in middleware to prevent XSS.

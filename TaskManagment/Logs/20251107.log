@@ -282,3 +282,4 @@ System.InvalidOperationException: Simulated runtime exception for testing global
    at TaskManagment.Middlewares.InputValidationMiddleware.InvokeAsync(HttpContext context) in /Users/kawengng/TaskManagement_Backend/TaskManagment/Middlewares/InputSanitizationMiddleware.cs:line 59
    at TaskManagment.Middlewares.GlobalExceptionMiddleware.InvokeAsync(HttpContext context) in /Users/kawengng/TaskManagement_Backend/TaskManagment/Middlewares/GlobalExceptionMiddleware.cs:line 29
 2025-11-07 19:43:46.640 +08:00 [WRN] Failed to determine the https port for redirect.
+2025-11-07 19:52:36.948 +08:00 [WRN] Failed to determine the https port for redirect.
