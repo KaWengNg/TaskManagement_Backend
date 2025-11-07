@@ -93,3 +93,6 @@
 /Users/kawengng/TaskManagement_Backend/TaskManagment/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.Design.dll
 /Users/kawengng/TaskManagement_Backend/TaskManagment/bin/Debug/net6.0/TaskManagment.xml
 /Users/kawengng/TaskManagement_Backend/TaskManagment/obj/Debug/net6.0/TaskManagment.xml
+/Users/kawengng/TaskManagement_Backend/TaskManagment/bin/Debug/net6.0/AspNetCoreRateLimit.dll
+/Users/kawengng/TaskManagement_Backend/TaskManagment/bin/Debug/net6.0/Microsoft.Extensions.Logging.Abstractions.dll
+/Users/kawengng/TaskManagement_Backend/TaskManagment/bin/Debug/net6.0/Newtonsoft.Json.dll
