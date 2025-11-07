@@ -120,3 +120,7 @@
 /Users/kawengng/TaskManagement_Backend/TaskManagment/bin/Debug/net6.0/System.IO.Pipelines.dll
 /Users/kawengng/TaskManagement_Backend/TaskManagment/bin/Debug/net6.0/System.Text.Encodings.Web.dll
 /Users/kawengng/TaskManagement_Backend/TaskManagment/bin/Debug/net6.0/System.Text.Json.dll
+/Users/kawengng/TaskManagement_Backend/TaskManagment/bin/Debug/net6.0/AngleSharp.dll
+/Users/kawengng/TaskManagement_Backend/TaskManagment/bin/Debug/net6.0/AngleSharp.Css.dll
+/Users/kawengng/TaskManagement_Backend/TaskManagment/bin/Debug/net6.0/HtmlSanitizer.dll
+/Users/kawengng/TaskManagement_Backend/TaskManagment/bin/Debug/net6.0/System.Collections.Immutable.dll

@@ -7,3 +7,11 @@
 2025-11-07 13:05:10.782 +08:00 [INF] Request get:/api/tasks from IP ::1 has been blocked, quota 5/10s exceeded by 2. Blocked by rule *, TraceIdentifier 0HNGTNCK7O50F:00000007. MonitorMode: False
 2025-11-07 13:05:14.582 +08:00 [INF] Request get:/api/tasks from IP ::1 has been blocked, quota 5/10s exceeded by 3. Blocked by rule *, TraceIdentifier 0HNGTNCK7O50G:00000001. MonitorMode: False
 2025-11-07 13:10:57.578 +08:00 [WRN] Failed to determine the https port for redirect.
+2025-11-07 13:14:58.825 +08:00 [WRN] Failed to determine the https port for redirect.
+2025-11-07 13:31:45.155 +08:00 [WRN] Failed to determine the https port for redirect.
+2025-11-07 13:36:38.113 +08:00 [WRN] Failed to determine the https port for redirect.
+2025-11-07 13:48:17.252 +08:00 [WRN] Failed to determine the https port for redirect.
+2025-11-07 13:48:46.189 +08:00 [WRN] Blocked XSS attempt on /api/tasks
+2025-11-07 13:49:26.448 +08:00 [WRN] Blocked XSS attempt on /api/tasks
+2025-11-07 14:03:20.635 +08:00 [WRN] Failed to determine the https port for redirect.
+2025-11-07 14:03:37.718 +08:00 [WRN] Blocked XSS attempt on /api/tasks

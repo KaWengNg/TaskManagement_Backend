@@ -6,6 +6,7 @@ using TaskManagment.Services;
 using AspNetCoreRateLimit;
 using Serilog;
 using Microsoft.Extensions.FileProviders;
+using TaskManagment.Middlewares;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -103,6 +104,9 @@ if (app.Environment.IsDevelopment())
         ServeUnknownFileTypes = true
     });
 }
+
+// Sanitizer
+app.UseInputSanitization();
 
 app.UseCors();
 
