@@ -1,9 +1,8 @@
 ﻿<Properties StartupConfiguration="{5A5E0838-D111-4C8A-B3BF-889DA9D77403}|Default">
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.TaskManagement.Tests FirstBuild="True" />
   <MonoDevelop.Ide.ItemProperties.TaskManagment PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints />
   <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="TaskManagment/Helpers/ResolveServiceResult.cs">

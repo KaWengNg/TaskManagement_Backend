@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TaskManagment</name>
+    </assembly>
+    <members>
+        <member name="M:TaskApi.Controllers.TasksController.Create(TaskManagment.Dtos.CreateTaskDto)">
+            <summary>
+            Create task
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TaskApi.Controllers.TasksController.GetAll(System.Nullable{System.Boolean},System.Int32,System.Int32)">
+            <summary>
+            Get all task with optional filters
+            </summary>
+            <param name="completed">filter by status</param>
+            <param name="page">page number</param>
+            <param name="pageSize">Number of item per page</param>
+            <returns>Paginated list object</returns>
+        </member>
+        <member name="M:TaskApi.Controllers.TasksController.GetById(System.Guid)">
+            <summary>
+            Get task by id
+            </summary>
+            <param name="id">Guid</param>
+            <returns></returns>
+        </member>
+        <member name="M:TaskApi.Controllers.TasksController.Update(System.Guid,TaskManagment.Dtos.UpdateTaskDto)">
+            <summary>
+            Update task by id
+            </summary>
+            <param name="id">id</param>
+            <param name="dto">update object</param>
+            <returns></returns>
+        </member>
+        <member name="M:TaskApi.Controllers.TasksController.Delete(System.Guid)">
+            <summary>
+            Delete task by id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
