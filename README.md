@@ -1,5 +1,5 @@
 ﻿# Project overview
-##### This is a simple project for task management system which allows to create, retrieve, edit, and delete the task. It is build using the .NetCore with .Net Framework version 6.0 for the backend and Vite tools to build the Web front-end using TypeScript and React.  
+##### This is a simple project for task management system which allows to create, retrieve, edit, and delete the task. It is build using the .NetCore with .Net Framework version 6.0 for the backend and Vite tools to build the Web front-end using TypeScript and React. I use TailwindCSS to handle responsive UI.
 
 ## Prerequisites (required SDK versions, Node.js version, etc.)
 
@@ -16,10 +16,11 @@
 
 ## List of bonus features implemented :
 ##### 1. Data Annotation for input validation.
-##### 2. Integrate Swagger for automatic APIdocumentation.
+##### 2. Integrate Swagger for automatic API documentation.
 ##### 3. Implement logging with Serilog for key operations.
 ##### 4. Write tests using xUnit for one service method.
 ##### 5. Implement separation of concerns with Controller, Service, Data Access Layers.
 ##### 6. Configure CORS for development
 ##### 7. Use Data Transfer Objects with AutoMapper.
 ##### 8. Use RateLimit to limit incoming requests per IP.
+##### 9. Implement HtmlSanitizer for incoming payloads in middleware to prevent XSS.

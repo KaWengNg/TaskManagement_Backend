@@ -37,7 +37,7 @@ builder.Services.AddSwaggerGen(c =>
         }
     });
 
-    // Enable XML comments (optional but recommended)
+    // Enable XML comments
     var xmlFile = $"{System.Reflection.Assembly.GetExecutingAssembly().GetName().Name}.xml";
     var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
     if (File.Exists(xmlPath))
@@ -64,7 +64,7 @@ Log.Logger = new LoggerConfiguration()
     .CreateLogger();
 
 // Services
-builder.Services.AddScoped<ITaskService, TaskService>();
+builder.Services.AddScoped<ITaskService, TaskService>(); //Consider to create static class to build all services as project grows.
 
 // Database
 builder.Services.AddDbContext<TasksDbContext>(
@@ -83,18 +83,16 @@ var app = builder.Build();
 // Enable the rate limit middleware
 app.UseIpRateLimiting();
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
-
 app.UseHttpsRedirection();
 
-// Expose log file for development only (e.g: http://localhost:7069/logs/20251107.log)
+
 if (app.Environment.IsDevelopment())
 {
+    // Configure the HTTP request pipeline.
+    app.UseSwagger();
+    app.UseSwaggerUI();
+
+    // Expose log file for development only (e.g: http://localhost:7069/logs/20251107.log)
     var logsPath = Path.Combine(Directory.GetCurrentDirectory(), "Logs");
 
     app.UseStaticFiles(new StaticFileOptions
