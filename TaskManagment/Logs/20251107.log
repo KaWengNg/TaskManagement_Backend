@@ -15,3 +15,5 @@
 2025-11-07 13:49:26.448 +08:00 [WRN] Blocked XSS attempt on /api/tasks
 2025-11-07 14:03:20.635 +08:00 [WRN] Failed to determine the https port for redirect.
 2025-11-07 14:03:37.718 +08:00 [WRN] Blocked XSS attempt on /api/tasks
+2025-11-07 14:06:08.233 +08:00 [WRN] Failed to determine the https port for redirect.
+2025-11-07 14:06:20.181 +08:00 [WRN] Blocked XSS attempt on /api/tasks

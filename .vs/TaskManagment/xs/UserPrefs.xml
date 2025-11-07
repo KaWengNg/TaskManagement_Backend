@@ -1,47 +1,44 @@
 ﻿<Properties StartupConfiguration="{5A5E0838-D111-4C8A-B3BF-889DA9D77403}|Default">
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.TaskManagement.Tests FirstBuild="True" />
   <MonoDevelop.Ide.ItemProperties.TaskManagment PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints />
   <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="TaskManagment/Helpers/ResolveServiceResult.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ANSWERS.md">
     <Files>
-      <File FileName="TaskManagment/Program.cs" Line="78" Column="22" />
-      <File FileName="TaskManagment/appsettings.json" Line="22" Column="65" />
-      <File FileName="TaskManagment/Enum/TaskServiceStatus.cs" Line="3" Column="17" />
-      <File FileName="TaskManagment/Controllers/TaskController.cs" Line="29" Column="69" />
-      <File FileName="TaskManagment/Services/ServiceResult.cs" Line="25" Column="66" />
-      <File FileName="TaskManagment/Services/ITaskService.cs" Line="12" Column="6" />
-      <File FileName="TaskManagment/Services/TaskService.cs" Line="45" Column="57" />
-      <File FileName="TaskManagment/Dtos/ReadTaskDto.cs" Line="1" Column="1" />
-      <File FileName="TaskManagment/Helpers/ResolveServiceResult.cs" Line="12" Column="1" />
-      <File FileName="TaskManagment/Mapping/TaskMapping.cs" Line="1" Column="1" />
+      <File FileName="TaskManagment/Controllers/TaskController.cs" Line="28" Column="1" />
+      <File FileName="TaskManagment/Services/TaskService.cs" Line="95" Column="43" />
+      <File FileName="TaskManagment/Program.cs" Line="11" Column="34" />
+      <File FileName="TaskManagment/Services/ServiceResult.cs" Line="1" Column="1" />
+      <File FileName="TaskManagement.Tests/Test/UnitTest.cs" Line="19" Column="49" />
+      <File FileName="TaskManagment/appsettings.json" Line="52" Column="35" />
+      <File FileName="TaskManagment/Middlewares/InputSanitizationMiddleware.cs" Line="19" Column="1" />
+      <File FileName="../.nuget/packages/system.text.encodings.web/9.0.0/buildTransitive/netcoreapp2.0/System.Text.Encodings.Web.targets" Line="4" Column="5" />
+      <File FileName="../.nuget/packages/system.io.pipelines/9.0.0/buildTransitive/netcoreapp2.0/System.IO.Pipelines.targets" Line="4" Column="5" />
+      <File FileName="../.nuget/packages/system.diagnostics.diagnosticsource/9.0.0/buildTransitive/netcoreapp2.0/System.Diagnostics.DiagnosticSource.targets" Line="4" Column="5" />
+      <File FileName="../.nuget/packages/system.collections.immutable/9.0.1/buildTransitive/netcoreapp2.0/System.Collections.Immutable.targets" Line="4" Column="5" />
+      <File FileName="../.nuget/packages/microsoft.extensions.configuration.abstractions/9.0.0/buildTransitive/netcoreapp2.0/Microsoft.Extensions.Configuration.Abstractions.targets" Line="4" Column="5" />
+      <File FileName="../.nuget/packages/microsoft.extensions.options/9.0.0/buildTransitive/netcoreapp2.0/Microsoft.Extensions.Options.targets" Line="4" Column="5" />
+      <File FileName="../.nuget/packages/microsoft.extensions.logging.abstractions/9.0.0/buildTransitive/netcoreapp2.0/Microsoft.Extensions.Logging.Abstractions.targets" Line="4" Column="5" />
+      <File FileName="../.nuget/packages/microsoft.extensions.dependencyinjection/9.0.0/buildTransitive/netcoreapp2.0/Microsoft.Extensions.DependencyInjection.targets" Line="4" Column="5" />
+      <File FileName="TaskManagment/Helpers/ResolveServiceResult.cs" Line="15" Column="65" />
+      <File FileName="ANSWERS.md" Line="2" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="TaskManagment">
-            <Node name="TaskManagment">
-              <Node name="Dependencies" expanded="True">
-                <Node name="PackageDependencies" expanded="True" />
-              </Node>
-              <Node name="Data" expanded="True" />
-              <Node name="Dtos" expanded="True" />
-              <Node name="Enum" expanded="True" />
-              <Node name="Helpers" expanded="True">
-                <Node name="ResolveServiceResult.cs" selected="True" />
-              </Node>
-              <Node name="Mapping" expanded="True" />
-              <Node name="Models" expanded="True" />
-              <Node name="Properties" expanded="True" />
-              <Node name="Services" expanded="True" />
+          <Node name="TaskManagment" expanded="True" selected="True">
+            <Node name="TaskManagment" expanded="True">
+              <Node name="Dependencies" expanded="True" />
             </Node>
           </Node>
         </State>
       </Pad>
       <Pad Id="MonoDevelop.Debugger.WatchPad">
         <State />
+      </Pad>
+      <Pad Id="MonoDevelop.UnitTesting.TestPad">
+        <State name="__root__" />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
