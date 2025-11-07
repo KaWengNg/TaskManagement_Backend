@@ -57,7 +57,6 @@ public class TasksController : ControllerBase
     public async Task<ActionResult<ReadTaskDto>> GetById(Guid id)
     {
         var result = await _taskService.GetByIdAsync(id);
-        if (result == null) return NotFound();
         return ControllerResponseHelper.ResolveResult(this, result);
     }
 

@@ -1,5 +1,4 @@
-﻿using System.Threading.Tasks;
-using AutoMapper;
+﻿using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 using TaskManagment.Data;
 using TaskManagment.Dtos;
@@ -11,11 +10,13 @@ namespace TaskManagment.Services
     {
         private readonly TasksDbContext _db;
         private readonly IMapper _mapper;
+        private readonly ILogger<TaskService> _logger;
 
-        public TaskService(TasksDbContext db, IMapper mapper)
+        public TaskService(TasksDbContext db, IMapper mapper, ILogger<TaskService> logger)
         {
             _db = db;
             _mapper = mapper;
+            _logger = logger;
         }
 
         public async Task<ServiceResult<ReadTaskDto>> CreateAsync(CreateTaskDto dto)
@@ -60,7 +61,10 @@ namespace TaskManagment.Services
             var entity = await _db.Tasks.FirstOrDefaultAsync(t => t.Id == id);
 
             if (entity == null)
+            {
+                _logger.LogWarning("Get failed: Task {TaskId} not found.", id);
                 return ServiceResult<ReadTaskDto>.NotFound($"Task with ID {id} not found.");
+            }
 
             var dto = _mapper.Map<ReadTaskDto>(entity);
             return ServiceResult<ReadTaskDto>.Success(dto);
@@ -69,8 +73,12 @@ namespace TaskManagment.Services
         public async Task<ServiceResult<ReadTaskDto>> UpdateAsync(Guid id, UpdateTaskDto dto)
         {
             var entity = await _db.Tasks.FirstOrDefaultAsync(t => t.Id == id);
+
             if (entity == null)
+            {
+                _logger.LogWarning("Update failed: Task {TaskId} not found.", id);
                 return ServiceResult<ReadTaskDto>.NotFound($"Task with ID {id} not found.");
+            }
 
             _mapper.Map(dto, entity);
             await _db.SaveChangesAsync();
@@ -81,8 +89,12 @@ namespace TaskManagment.Services
         public async Task<ServiceResult<bool>> DeleteAsync(Guid id)
         {
             var entity = await _db.Tasks.FirstOrDefaultAsync(t => t.Id == id);
+
             if (entity == null)
+            {
+                _logger.LogWarning("Delete failed: Task {TaskId} not found.", id);
                 return ServiceResult<bool>.NotFound($"Task with ID {id} not found.");
+            }
 
             _db.Tasks.Remove(entity);
             await _db.SaveChangesAsync();

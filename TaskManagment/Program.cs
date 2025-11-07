@@ -4,6 +4,8 @@ using TaskManagment.Mapping;
 using Microsoft.OpenApi.Models;
 using TaskManagment.Services;
 using AspNetCoreRateLimit;
+using Serilog;
+using Microsoft.Extensions.FileProviders;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,7 +14,7 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 
-// Rate-limiting services (use this approach since using .net6, not supported for built-in Microsoft.AspNetCore.RateLimiting)
+// Rate-limiting services (use this approach since .net6, not supported for built-in Microsoft.AspNetCore.RateLimiting)
 builder.Services.AddMemoryCache();
 builder.Services.Configure<IpRateLimitOptions>(builder.Configuration.GetSection("IpRateLimiting"));
 builder.Services.AddSingleton<IRateLimitConfiguration, RateLimitConfiguration>();
@@ -55,6 +57,11 @@ builder.Services.AddCors(options =>
         });
 });
 
+// Logging
+Log.Logger = new LoggerConfiguration()
+    .ReadFrom.Configuration(builder.Configuration)
+    .CreateLogger();
+
 // Services
 builder.Services.AddScoped<ITaskService, TaskService>();
 
@@ -66,6 +73,9 @@ builder.Services.AddDbContext<TasksDbContext>(
 
 // AutoMapper
 builder.Services.AddAutoMapper(typeof(TaskMapping));
+
+// Serilog
+builder.Host.UseSerilog();
 
 var app = builder.Build();
 
@@ -80,6 +90,19 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+// Expose log file for development only (e.g: http://localhost:7069/logs/20251107.log)
+if (app.Environment.IsDevelopment())
+{
+    var logsPath = Path.Combine(Directory.GetCurrentDirectory(), "Logs");
+
+    app.UseStaticFiles(new StaticFileOptions
+    {
+        FileProvider = new PhysicalFileProvider(logsPath),
+        RequestPath = "/logs",
+        ServeUnknownFileTypes = true
+    });
+}
 
 app.UseCors();
 

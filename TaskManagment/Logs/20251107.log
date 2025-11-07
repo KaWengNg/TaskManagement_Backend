@@ -1,0 +1,8 @@
+2025-11-07 12:46:28.248 +08:00 [WRN] Failed to determine the https port for redirect.
+2025-11-07 13:02:27.937 +08:00 [WRN] Failed to determine the https port for redirect.
+2025-11-07 13:03:47.713 +08:00 [WRN] Failed to determine the https port for redirect.
+2025-11-07 13:04:21.032 +08:00 [WRN] Get failed: Task "2f06ced4-d47e-4e7c-982c-efc79659f0f3" not found.
+2025-11-07 13:05:08.163 +08:00 [WRN] Failed to determine the https port for redirect.
+2025-11-07 13:05:10.541 +08:00 [INF] Request get:/api/tasks from IP ::1 has been blocked, quota 5/10s exceeded by 1. Blocked by rule *, TraceIdentifier 0HNGTNCK7O50F:00000006. MonitorMode: False
+2025-11-07 13:05:10.782 +08:00 [INF] Request get:/api/tasks from IP ::1 has been blocked, quota 5/10s exceeded by 2. Blocked by rule *, TraceIdentifier 0HNGTNCK7O50F:00000007. MonitorMode: False
+2025-11-07 13:05:14.582 +08:00 [INF] Request get:/api/tasks from IP ::1 has been blocked, quota 5/10s exceeded by 3. Blocked by rule *, TraceIdentifier 0HNGTNCK7O50G:00000001. MonitorMode: False
