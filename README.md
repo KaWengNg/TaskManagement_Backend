@@ -16,7 +16,8 @@ dotnet ef database update
 dotnet run
 
 ## How to run the application locally
-##### The application can be run locally using the visual studio code (front-end) and visual studio IDE (back-end) with necessary libraries being installed.
+##### The application can be run locally using the Visual Studio IDE with necessary libraries being installed.
+##### Also change the appsettings values where necessary in appsettings.json
 
 ## How to run tests (if implemented)
 ##### I created the xunit test project that can be run seperated by referencing to the main project.
