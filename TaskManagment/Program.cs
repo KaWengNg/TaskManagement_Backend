@@ -21,11 +21,11 @@ var app = builder.Build();
 app.UseIpRateLimiting();
 app.UseHttpsRedirection();
 
+app.UseSwagger(); // for demo purpose: temporary moved outside IsDevelopment block
+app.UseSwaggerUI(); // for demo purpose: temporary moved outside IsDevelopment block
+
 if (app.Environment.IsDevelopment())
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
-
     var logsPath = Path.Combine(Directory.GetCurrentDirectory(), "Logs");
     app.UseStaticFiles(new StaticFileOptions
     {
