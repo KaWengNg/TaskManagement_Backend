@@ -38,4 +38,8 @@ dotnet run
 ##### 10. Implement HtmlSanitizer for incoming payloads in middleware to prevent XSS.
 
 ## Production URL
-##### Backend: http://taskmanagementassessment.runasp.net/swagger/index.html
+##### Backend URL: http://taskmanagementassessment.runasp.net/swagger/index.html
+##### Frontend URL: https://task-management-frontend-virid.vercel.app
+
+##### Issue: There will be an Mixed Content error, since Frontend URL is SSL secure whereas Backend URL is not (due to free plan in https://www.monsterasp.net/)
+#### But still can test by bypass: allowing browser site setting (Insecure content set to 'Allow') 
